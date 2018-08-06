@@ -23,7 +23,7 @@ Still work :construction_worker:
 
 <h2>EDITOR</h2>
 <b>Aka_Shinobi</b>
-https://line.me/R/ti/p/~alif.shinobi
-</br>
+</br>https://line.me/R/ti/p/~alif.shinobi
+</br></br>
 <h2>THX TO</h2>
 <b>Alfathdirk</b>
