@@ -32,7 +32,7 @@ class LineAPI {
     this.axz = false;
     this.axy = false;
     this.gdLine = "http://gd2.line.naver.jp";
-    this.gdLine2 = "http://gf.line.naver.jp";
+    this.gdLine2 = "http://gwx.line.naver.jp";
   }
 
   setTHttpClient(options = {
@@ -42,12 +42,12 @@ class LineAPI {
     path: this.config.LINE_HTTP_URL,
     https: true
   }) {
-    //options.headers['X-Line-Application'] = 'CHROMEOS\t2.1.0\tChrome_OS\t1';
-    options.headers['X-Line-Application'] = 'IOSIPAD 7.14.0 iPhone OS 10.12.0';
+    options.headers['X-Line-Application'] = 'CHROMEOS\t2.1.5\tChrome_OS\t1';
+    //options.headers['X-Line-Application'] = 'IOSIPAD 7.10.1 iPhone OS 10.12.0';
     //options.headers['X-Line-Application'] = 'DESKTOPMAC\t5.3.3-YOSEMITE-x64\tMAC\t10.12.0';
     this.options = options;
     this.connection =
-      thrift.createHttpConnection(this.config.LINE_DOMAIN_3RD, 443, this.options);
+      thrift.createHttpConnection(this.config.LINE_DOMAIN_2ND, 443, this.options);
     this.connection.on('error', (err) => {
       console.log('err',err);
       return err;
@@ -107,7 +107,7 @@ class LineAPI {
                 this.options.headers['X-Line-Access'] = config.tokenn;
                 this.options.path = this.config.LINE_COMMAND_PATH;
                 this.setTHttpClient(this.options);
-          this.options.headers['User-Agent'] = 'Line/7.18.1';
+          this.options.headers['User-Agent'] = 'DESKTOP:WIN:6.1.7600-7-x64(5.1.2)';
           this.axz = true;
           this.setTHttpClient(this.options);
           this.axz = false;
@@ -314,7 +314,7 @@ class LineAPI {
   }
   
   async _acceptGroupInvitationByTicket(gid,ticketID){
-    this._refrehGroup();
+    this._refreshGroup();
     return await this._client.acceptGroupInvitationByTicket(0,gid,ticketID);
   }
 
