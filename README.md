@@ -10,7 +10,7 @@ check your nodejs version
 
 How to run ?
 ------
-- `git clone https://github.com/MinatoAka/LineAlphatJS.git`
+- `git clone https://github.com/MinatoAka/shinJS.git`
 - `cd LineAlphatJS && npm install`
 - `npm start`
 
