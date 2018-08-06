@@ -1,5 +1,7 @@
 Line Alphat JS
 
+<h1>THIS FORKED SHINOBI VERSION</h1>
+
 # require node >= v8.x.x
 check your nodejs version
 `node -v`
@@ -19,6 +21,9 @@ Still work :construction_worker:
 - Implement All 
 - Improve logic
 
-Author
-------
-[@alfathdirk](https://instagram.com/alfathdirk)
+<h2>EDITOR</h2>
+<b>Aka_Shinobi</b>
+https://line.me/R/ti/p/~alif.shinobi
+</br>
+<h2>THX TO</h2>
+<b>Alfathdirk</b>
