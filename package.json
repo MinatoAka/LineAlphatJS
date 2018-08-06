@@ -1,7 +1,7 @@
 {
-  "name": "linealphatjs",
+  "name": "lineshinobijs",
   "version": "0.2.1",
-  "description": "LineAlphat JS",
+  "description": "LineShinobi JS",
   "main": "./library/main.js",
   "scripts": {
     "start": "npm run bot",
@@ -9,11 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alfathdirk/LineAlphatJS.git"
+    "url": "https://github.com/MinatoAka/shinJS.git"
   },
   "author": {
-    "name": "alfathdirk",
-    "email": "alfathdirk@gmail.com"
+    "name": "akashinobi",
+    "email": "alif_lk@yahoo.com"
   },
   "license": "MIT",
   "devDependencies": {
