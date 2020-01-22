@@ -6,8 +6,8 @@ const config = {
   LINE_DOMAIN_INDO: 'gd2i.line.naver.jp',
   LINE_DOMAIN_FAST: 'gfs.line.naver.jp',
   LINE_DOMAIN_TOOFAST: 't.line.naver.jp',
-  LINE_DOMAIN: 'ga2.line.naver.jp',
-  LINE_DOMAIN_2ND: 'gd2.line.naver.jp',
+  LINE_DOMAIN: 'gd2.line.naver.jp',
+  LINE_DOMAIN_2ND: 'ga2.line.naver.jp',
   LINE_DOMAIN_3RD: 'gfs.line.naver.jp', 
   LINE_DOMAIN_4TH: 'gfps.line.naver.jp',
   LINE_KEEP_X: '/r/keep/p/', //https://obs-sg.line-apps.com/r/keep/p/1508751723510tffffffff
