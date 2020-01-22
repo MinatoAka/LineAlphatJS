@@ -31,8 +31,8 @@ class LineAPI {
     this.setTHttpClient();
     this.axz = false;
     this.axy = false;
-    this.gdLine = "http://gd2.line.naver.jp";
-    this.gdLine2 = "http://gwx.line.naver.jp";
+    this.gdLine = "http://ga2.line.naver.jp";
+    this.gdLine2 = "http://gd2.line.naver.jp";
   }
 
   setTHttpClient(options = {
@@ -42,9 +42,7 @@ class LineAPI {
     path: this.config.LINE_HTTP_URL,
     https: true
   }) {
-    options.headers['X-Line-Application'] = 'CHROMEOS\t2.1.5\tChrome_OS\t1';
-    //options.headers['X-Line-Application'] = 'IOSIPAD 7.10.1 iPhone OS 10.12.0';
-    //options.headers['X-Line-Application'] = 'DESKTOPMAC\t5.3.3-YOSEMITE-x64\tMAC\t10.12.0';
+    options.headers['X-Line-Application'] = 'CHROMEOS\t2.3.2\tChrome_OS\t1';
     this.options = options;
     this.connection =
       thrift.createHttpConnection(this.config.LINE_DOMAIN_2ND, 443, this.options);
@@ -91,7 +89,7 @@ class LineAPI {
       qrcode.generate(qrcodeUrl,{small: true});
       console.info(`\n\nlink qr code is: ${qrcodeUrl}`)
       Object.assign(this.config.Headers,{ 'X-Line-Access': result.verifier });
-        unirest.get('https://gd2.line.naver.jp/Q')
+        unirest.get('https://ga2.line.naver.jp/Q')
           .headers(this.config.Headers)
           .timeout(120000)
           .end(async (res) => {
@@ -107,7 +105,7 @@ class LineAPI {
                 this.options.headers['X-Line-Access'] = config.tokenn;
                 this.options.path = this.config.LINE_COMMAND_PATH;
                 this.setTHttpClient(this.options);
-          this.options.headers['User-Agent'] = 'DESKTOP:WIN:6.1.7600-7-x64(5.1.2)';
+          this.options.headers['User-Agent'] = 'Line/2.3.2';
           this.axz = true;
           this.setTHttpClient(this.options);
           this.axz = false;
@@ -134,7 +132,7 @@ class LineAPI {
          reqx.password = rsaCrypto.credentials;
          reqx.keepLoggedIn = true;
          reqx.accessLocation = this.config.ip;
-         reqx.systemName = 'LineShinobi';
+         reqx.systemName = 'Shinobi';
          reqx.e2eeVersion = 0;
          try{
            this._client.loginZ(reqx,
